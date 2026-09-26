@@ -3,24 +3,24 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://codepartmirror.vercel.app"
+    "https://stanby-management-report.vercel.app"
   ),
 
   title: {
-    default: "Part Code Management",
-    template: "%s | Part Code Management",
+    default: "Standby Management Report",
+    template: "%s | Standby Management Report",
   },
 
   description:
-    "Sistem pengelolaan dan pembuatan kode part SU2ID dan KS berdasarkan area, kode part, dan warna.",
+    "Sistem Standby Management Report untuk pengelolaan data SU2ID dan KS secara cepat dan terstruktur.",
 
   keywords: [
-    "Part Code Management",
-    "Part Code",
+    "Standby Management Report",
+    "Standby Management",
     "SU2ID",
     "KS",
+    "Part Code",
     "Part Number",
-    "Part Management",
     "Quality Control",
     "Assembly",
     "Automotive",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Part Code Management",
+      name: "Standby Management Report",
     },
   ],
 
-  creator: "Part Code Management",
+  creator: "Standby Management Report",
 
   applicationName:
-    "Part Code Management",
+    "Standby Management Report",
 
   generator: "Next.js",
 
@@ -85,16 +85,16 @@ export const metadata: Metadata = {
 
     locale: "id_ID",
 
-    url: "https://codepartmirror.vercel.app",
+    url: "https://stanby-management-report.vercel.app",
 
     siteName:
-      "Part Code Management",
+      "Standby Management Report",
 
     title:
-      "Part Code Management",
+      "Standby Management Report",
 
     description:
-      "Sistem pengelolaan kode part SU2ID dan KS secara cepat dan terstruktur.",
+      "Sistem Standby Management Report untuk pengelolaan data SU2ID dan KS secara cepat dan terstruktur.",
 
     images: [
       {
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
         height: 630,
 
         alt:
-          "Part Code Management",
+          "Standby Management Report",
       },
     ],
   },
@@ -114,10 +114,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Part Code Management",
+      "Standby Management Report",
 
     description:
-      "Sistem pengelolaan kode part SU2ID dan KS.",
+      "Sistem Standby Management Report untuk pengelolaan data SU2ID dan KS.",
 
     images: [
       "/og-image.png",
@@ -128,7 +128,6 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-
   width: "device-width",
 
   initialScale: 1,
@@ -138,7 +137,6 @@ export const viewport: Viewport = {
   themeColor: "#2563eb",
 
   colorScheme: "light",
-
 };
 
 export default function RootLayout({
@@ -146,18 +144,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-
     <html lang="id">
-
       <body className="min-h-screen bg-slate-100 antialiased">
-
         {children}
-
       </body>
-
     </html>
-
   );
 }
