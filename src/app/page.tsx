@@ -195,18 +195,6 @@ export default function Home() {
       />
 
       <main className="mx-auto min-w-0 max-w-[1600px] px-3 py-4 sm:px-5 sm:py-5 lg:px-7">
-        <div className="mb-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
-
-          <div className="hidden shrink-0 rounded-lg bg-emerald-50 px-3 py-2 sm:block">
-            <p className="text-[10px] font-semibold text-emerald-700">
-              Total Data
-            </p>
-
-            <p className="text-center text-sm font-extrabold text-emerald-800">
-              {data.length}
-            </p>
-          </div>
-        </div>
 
         {activeSection === "setting" && (
           <section className="space-y-4">
