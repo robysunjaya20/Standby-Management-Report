@@ -19,24 +19,6 @@ import { saveBatchToGoogleSheets } from "@/lib/api";
 
 type Section = "setting" | "form" | "data";
 
-const navigation: {
-  id: Section;
-  label: string;
-}[] = [
-  {
-    id: "setting",
-    label: "Setting Area Kerja",
-  },
-  {
-    id: "form",
-    label: "Tambah Data",
-  },
-  {
-    id: "data",
-    label: "Data Part Code",
-  },
-];
-
 export default function Home() {
   const {
     data,
@@ -97,10 +79,6 @@ export default function Home() {
   const navigateTo = (section: Section) => {
     setActiveSection(section);
   };
-
-  const currentNavigation = navigation.find(
-    (item) => item.id === activeSection
-  )!;
 
   const handleSaveAreaSetting = () => {
     const result = saveAreaSetting();
@@ -218,19 +196,6 @@ export default function Home() {
 
       <main className="mx-auto min-w-0 max-w-[1600px] px-3 py-4 sm:px-5 sm:py-5 lg:px-7">
         <div className="mb-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
-          <div className="min-w-0 flex-1">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-blue-600">
-              {currentNavigation.label}
-            </p>
-
-            <h1 className="mt-1 truncate text-base font-extrabold text-slate-900 sm:text-lg">
-              {currentNavigation.label}
-            </h1>
-
-            <p className="mt-0.5 text-[11px] text-slate-500 sm:text-xs">
-              Kelola pencatatan dan monitoring part.
-            </p>
-          </div>
 
           <div className="hidden shrink-0 rounded-lg bg-emerald-50 px-3 py-2 sm:block">
             <p className="text-[10px] font-semibold text-emerald-700">
