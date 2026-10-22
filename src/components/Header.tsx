@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex min-w-0 items-center gap-3">
           <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl bg-white">
             <Image
-              src="/logo.PNG"
+              src="/logo.png"
               alt="Logo BEI"
               fill
               priority
