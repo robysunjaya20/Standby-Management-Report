@@ -1,6 +1,6 @@
 export type PartResult = "OK" | "NG";
 
-export type AreaSetting = "RAK JIS" | "DOORSUB";
+export type AreaSetting = "RAK JIS" | "DOORSUB" | "J12";
 
 export type ShiftType = "SHIFT 1" | "SHIFT 2";
 

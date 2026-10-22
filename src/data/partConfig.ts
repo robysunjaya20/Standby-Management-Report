@@ -20,6 +20,7 @@ export const AREA_OPTIONS = [
 export const WORK_AREA_OPTIONS = [
   "RAK JIS",
   "DOORSUB",
+  "J12",
 ] as const;
 
 export const RACK_JIS_OPTIONS = [

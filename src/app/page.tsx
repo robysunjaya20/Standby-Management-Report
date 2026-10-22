@@ -33,7 +33,7 @@ const navigation: {
   },
   {
     id: "form",
-    label: "Tambah Kode Part",
+    label: "Tambah Data",
     icon: "➕",
     description: "Input kode part",
   },
@@ -345,13 +345,13 @@ export default function Home() {
 
             <div className="min-w-0 flex-1">
               <p className="text-[10px] font-bold uppercase tracking-widest text-blue-600">
-                Dashboard / {currentNavigation.label}
+                {currentNavigation.label}
               </p>
               <h1 className="mt-1 truncate text-base font-extrabold text-slate-900 sm:text-lg">
                 {currentNavigation.label}
               </h1>
               <p className="mt-0.5 text-[11px] text-slate-500">
-                Kelola pencatatan dan monitoring kode part.
+                Kelola pencatatan dan monitoring part.
               </p>
             </div>
 
@@ -367,15 +367,6 @@ export default function Home() {
 
           {activeSection === "setting" && (
             <section className="space-y-4">
-              <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
-                <h2 className="text-sm font-extrabold text-blue-900">
-                  Pengaturan Area Kerja
-                </h2>
-                <p className="mt-1 text-xs leading-relaxed text-blue-700">
-                  Atur tanggal kerja, shift, area, nomor Rak JIS,
-                  dan PIC sebelum melakukan pencatatan.
-                </p>
-              </div>
 
               <AreaSetting
                 area={workArea}

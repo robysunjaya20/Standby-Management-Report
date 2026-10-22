@@ -189,11 +189,12 @@ export function usePartCodes() {
                     : "OK";
 
 
-                const migratedWorkArea:
-                  AreaSetting =
+                const migratedWorkArea: AreaSetting =
                   item.workArea ===
                   "DOORSUB"
                     ? "DOORSUB"
+                    : item.workArea === "J12"
+                    ? "J12"
                     : "RAK JIS";
 
 
@@ -288,6 +289,8 @@ export function usePartCodes() {
           setting.workArea ===
           "DOORSUB"
             ? "DOORSUB"
+            : setting.workArea === "J12"
+            ? "J12"
             : "RAK JIS";
 
 
