@@ -309,15 +309,7 @@ export function usePartCodes() {
             ? "SHIFT 2"
             : "SHIFT 1";
 
-
-        const loadedWorkDate =
-          /^\d{4}-\d{2}-\d{2}$/.test(
-            setting.workDate ||
-            ""
-          )
-            ? setting.workDate
-            : getTodayDate();
-
+        const loadedWorkDate = getTodayDate();  
 
         setWorkArea(
           loadedArea
@@ -668,56 +660,31 @@ export function usePartCodes() {
   };
 
 
+  
   const resetForm = () => {
+    setForm((previous) => ({
+      ...previous,
 
-    setForm(
-      (previous) => ({
-        ...previous,
+      area: previous.area,
+      stampDate: previous.stampDate,
+      partCode: previous.partCode,
 
-        /*
-         * Model terakhir tetap dipertahankan
-         */
-        area:
-          previous.area,
+      result: "OK",
+      detailProblem: "",
 
-        partCode:
-          "",
+      workArea,
+      rackJis,
+      pic,
+      shift,
+    }));
 
-        result:
-          "OK",
-
-        stampDate:
-          "",
-
-        detailProblem:
-          "",
-
-        /*
-         * Setting area terakhir
-         */
-        workArea,
-
-        rackJis,
-
-        pic,
-
-        shift,
-      })
-    );
-
-
-    setEditingId(
-      null
-    );
-
+    setEditingId(null);
   };
+
 
 
   const savePart = () => {
 
-    /*
-     * Validasi Part Code
-     */
     if (
       !/^\d{3}[A-Z0-9]{3}$/.test(
         form.partCode
